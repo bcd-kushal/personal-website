@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --main-bg: rgb(3,3,3);
+    --main-col: #e8e8e8;
+    --no-color: rgba(0,0,0,0);
+    --prim-col: rgb(246, 255, 0);
+    --slide-text-amount: 5vw;
+}
+
+::-webkit-scrollbar{ display: none; }
+
+body{
+    min-width: 100vw;
+    min-height: 400vh;
+    max-width: 100vw;
+
+    background: var(--main-bg);
+    color: var(--main-col);
+    font-family: 'Josefin Sans';
+}
+
+#loading-screen{
+    top: 0;
+    min-height: 100vh;
+    max-height: 100vh;
+    min-width: 100vw;
+    max-width: 100vw;
+    background: var(--no-color);
+    position: fixed;
+}
+
+#loading-screen .progress-display{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.fade-in{
+    opacity: 1;
+    transition: opacity 0.7s ease-in-out;
+}
+
+.fade-out{
+    transition: opacity 0.7s ease-in-out;
+    opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+.yellowLine{
+    width: 0;
+    height: 2px;
+    background: var(--prim-col);
+    position: absolute;
+    top: 40%;
+    left: 0;
+    transition: width 1s ease-in-out;
+    transform: translateY(-50%);
+    z-index: 5;
+}
+
+.yellowLine.expanded{ width: 1000px; }
+
+
+
+#name-svg{
+    width: 70vw;
+    height: 35vh;
+}
+
+
+
+.container{
+    display: grid;
+    position: absolute;
+    top: 0;
+    font-size: 4vw;
+    visibility: hidden;
+}
+.container > *{
+    grid-row-start: 1;
+    grid-column-start: 1;
+}
+
+.textbox{
+    display: flex;
+    justify-content: center;
+    height: 4.5vw;
+    display: flex;
+    align-items: end;
+}
+
+.box{ 
+    z-index: 3; 
+    background-color: var(--main-bg);
+    height: 4.5vw;
+}
+.textbox{ z-index: 1; }
+
+.nameTitle{
+}
+
+.text{
+    transition: transform 0.7s;
+    margin-left: 10px;
+}
+.slidingDown{
+    transform: translateY(var(--slide-text-amount));
+}
+.slidingUp{
+    transform: translateY( calc( -1 * var(--slide-text-amount) ) );
+}
+
+.titleContainer{
+    display: grid;
+}
+
+.titleContainer > *{
+    grid-row-start: 1;
+    grid-column-start: 1;
+}
