@@ -55,11 +55,11 @@ window.onload = () => {
         scrollbarScript.src = 'scrollbar.js'; // The JavaScript file to load dynamically
         document.body.appendChild(scrollbarScript);
         
-        /* var introScript = document.createElement('script');
-        introScript.src = 'intro.js'; // The JavaScript file to load dynamically
-        document.body.appendChild(introScript);
+        var headerScript = document.createElement('script');
+        headerScript.src = './header/header.js'; // The JavaScript file to load dynamically
+        document.body.appendChild(headerScript);
         
-        var introScript = document.createElement('script');
+        /* var introScript = document.createElement('script');
         introScript.src = 'intro.js'; // The JavaScript file to load dynamically
         document.body.appendChild(introScript); */
 
